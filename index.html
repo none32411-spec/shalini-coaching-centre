@@ -1,141 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Shalini Coaching Center</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-html{
-scroll-behavior:smooth;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:#f4f7fb;
+font-family:'Montserrat',sans-serif;
+background:#f5f7fb;
 color:#333;
+line-height:1.6;
 }
 
 /* NAVBAR */
 
 nav{
-position:sticky;
-top:0;
-background:#0d2b45;
+background:#0b2b4a;
 padding:15px;
 display:flex;
 justify-content:center;
-gap:30px;
-z-index:1000;
+gap:40px;
+position:sticky;
+top:0;
+z-index:999;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 font-weight:500;
-transition:.3s;
+transition:0.3s;
 }
 
 nav a:hover{
-color:#7fd3ff;
+color:#6cc7ff;
 }
 
 /* HERO */
 
 .hero{
-height:500px;
+height:520px;
 background:url("https://images.unsplash.com/photo-1523240795612-9a054b0db644") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-color:white;
 }
 
-.hero-overlay{
-background:rgba(0,0,0,.55);
+.hero-box{
+background:rgba(0,0,0,0.6);
 padding:40px;
-border-radius:10px;
-animation:fadeIn 1.5s;
+border-radius:8px;
+color:white;
+max-width:700px;
 }
 
 .hero h1{
-font-size:42px;
+font-size:44px;
 margin-bottom:10px;
 }
 
 .hero p{
-font-size:20px;
+font-size:18px;
 }
 
-/* CONTAINER */
+/* MAIN CONTAINER */
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:40px 20px;
+padding:60px 20px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
-margin-top:40px;
-background:white;
-padding:40px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-animation:fadeUp 1s;
+margin-bottom:60px;
 }
 
-h2{
-color:#0d2b45;
+section h2{
+font-size:30px;
+color:#0b2b4a;
 margin-bottom:20px;
+}
+
+/* ABOUT */
+
+.about p{
+margin-bottom:15px;
 }
 
 /* FEATURES */
 
 .features{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:30px;
 }
 
 .feature{
-background:#eef4fa;
-padding:20px;
+background:white;
+padding:25px;
 border-radius:8px;
-transition:.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
 .feature:hover{
 transform:translateY(-8px);
-box-shadow:0 8px 18px rgba(0,0,0,.15);
 }
 
 /* SUBJECTS */
 
 .subjects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:20px;
+margin-top:20px;
 }
 
 .subject{
-background:#dbe9f6;
-padding:18px;
+background:#e6f1fb;
+padding:20px;
 text-align:center;
-border-radius:6px;
 font-weight:600;
-transition:.3s;
+border-radius:6px;
+transition:0.3s;
 }
 
 .subject:hover{
-background:#c6ddf2;
+background:#cfe6fb;
 transform:scale(1.05);
 }
 
@@ -143,37 +150,54 @@ transform:scale(1.05);
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:15px;
+margin-top:20px;
 }
 
 .gallery img{
 width:100%;
 border-radius:8px;
-transition:.4s;
+transition:0.4s;
 }
 
 .gallery img:hover{
-transform:scale(1.08);
+transform:scale(1.07);
 }
 
-/* MAP */
+/* LOCATION */
+
+.location p{
+margin-bottom:15px;
+}
 
 iframe{
 width:100%;
+height:300px;
 border:0;
 border-radius:8px;
-height:300px;
 }
 
 /* CONTACT */
 
-.contact{
-font-size:20px;
-font-weight:600;
+.contact-box{
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+font-size:18px;
 }
 
-/* WHATSAPP BUTTON */
+/* FOOTER */
+
+footer{
+background:#0b2b4a;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -181,51 +205,15 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:14px 18px;
+padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 4px 12px rgba(0,0,0,.3);
-transition:.3s;
-}
-
-.whatsapp:hover{
-transform:scale(1.1);
-}
-
-/* FOOTER */
-
-footer{
-background:#0d2b45;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
-
-/* ANIMATIONS */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-}
-to{
-opacity:1;
-}
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 </style>
+
 </head>
 
 <body>
@@ -239,35 +227,50 @@ opacity:1;
 </nav>
 
 <div class="hero">
-<div class="hero-overlay">
+
+<div class="hero-box">
+
 <h1>Shalini Coaching Center</h1>
+
 <p>Academic Support for CBSE & BSEB Students</p>
-<p>Focused Classroom Learning • Four Days a Week</p>
+
+<p>Focused Classroom Learning • Core Subjects • Four Days a Week</p>
+
 </div>
+
 </div>
 
 <div class="container">
 
-<section id="about">
+<section id="about" class="about">
+
 <h2>About the Institute</h2>
+
 <p>
-Shalini Coaching Center provides academic support for students studying under the CBSE and BSEB curriculum.
-Classes focus on strengthening conceptual understanding, regular practice, and consistent academic guidance.
+Shalini Coaching Center provides structured academic guidance for school students studying under the CBSE and BSEB curriculum.
+The coaching focuses on strengthening students’ understanding of fundamental concepts taught in school.
 </p>
+
+<p>
+Classes are conducted four days a week and focus on regular practice, revision, and strengthening conceptual clarity.
+Students receive classroom guidance in core academic subjects in a focused learning environment.
+</p>
+
 </section>
 
 <section>
+
 <h2>Why Choose This Coaching</h2>
 
 <div class="features">
 
-<div class="feature">Small classroom environment</div>
+<div class="feature">Focused classroom teaching</div>
 
-<div class="feature">Focused teaching approach</div>
+<div class="feature">Regular academic practice</div>
 
-<div class="feature">Core school subjects covered</div>
+<div class="feature">Core subjects coverage</div>
 
-<div class="feature">Regular study schedule</div>
+<div class="feature">Small batch learning</div>
 
 </div>
 
@@ -311,7 +314,7 @@ Classes focus on strengthening conceptual understanding, regular practice, and c
 
 </section>
 
-<section id="location">
+<section id="location" class="location">
 
 <h2>Location</h2>
 
@@ -329,10 +332,12 @@ Bihar, India
 
 <h2>Contact</h2>
 
-<p>For admission enquiries:</p>
+<div class="contact-box">
 
-<div class="contact">
+For admission enquiries please contact:<br><br>
+
 📞 +91 88041 30612
+
 </div>
 
 </section>
@@ -341,7 +346,7 @@ Bihar, India
 
 <footer>
 
-<p>© 2026 Shalini Coaching Center</p>
+© 2026 Shalini Coaching Center
 
 </footer>
 
